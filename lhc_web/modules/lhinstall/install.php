@@ -1087,8 +1087,20 @@ switch ((int)$Params['user_parameters']['step_id']) {
 				  `inform_unread` tinyint(1) NOT NULL,
 				  `active_balancing` tinyint(1) NOT NULL,
 				  `visible_if_online` tinyint(1) NOT NULL,
-				  `start_hour` int(2) NOT NULL,
-				  `end_hour` int(2) NOT NULL,
+                  `start_hour_monday` int(2) NOT NULL,
+                  `start_hour_tuesday` int(2) NOT NULL,
+                  `start_hour_wednesday` int(2) NOT NULL,
+                  `start_hour_thursday` int(2) NOT NULL,
+                  `start_hour_friday` int(2) NOT NULL,
+                  `start_hour_saturday` int(2) NOT NULL,
+                  `start_hour_sunday` int(2) NOT NULL,
+                  `end_hour_monday` int(2) NOT NULL,
+                  `end_hour_tuesday` int(2) NOT NULL,
+                  `end_hour_wednesday` int(2) NOT NULL,
+                  `end_hour_thursday` int(2) NOT NULL,
+                  `end_hour_friday` int(2) NOT NULL,
+                  `end_hour_saturday` int(2) NOT NULL,
+                  `end_hour_sunday` int(2) NOT NULL,
 				  `inform_close` int(11) NOT NULL,
 				  `inform_unread_delay` int(11) NOT NULL,
 				  `inform_options` varchar(250) NOT NULL,
@@ -1107,7 +1119,8 @@ switch ((int)$Params['user_parameters']['step_id']) {
 				  KEY `attr_int_3` (`attr_int_3`),
 				  KEY `disabled_hidden` (`disabled`, `hidden`),
 				  KEY `sort_priority_name` (`sort_priority`, `name`),
-				  KEY `oha_sh_eh` (`online_hours_active`,`start_hour`,`end_hour`)
+                  KEY `oha_sh_eh` (`online_hours_active`,`start_hour_monday`,`start_hour_tuesday`,`start_hour_wednesday`,`start_hour_thursday`,`start_hour_friday`,`start_hour_saturday`,`start_hour_sunday`,
+                    `end_hour_monday`,`end_hour_tuesday`,`end_hour_wednesday`,`end_hour_thursday`,`end_hour_friday`,`end_hour_saturday`,`end_hour_sunday`)
 				) DEFAULT CHARSET=utf8;");
 
         	   

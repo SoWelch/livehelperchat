@@ -90,15 +90,75 @@ $def->properties['sud']->columnName   = 'sud';
 $def->properties['sud']->propertyName = 'sud';
 $def->properties['sud']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
 
-$def->properties['start_hour'] = new ezcPersistentObjectProperty();
-$def->properties['start_hour']->columnName   = 'start_hour';
-$def->properties['start_hour']->propertyName = 'start_hour';
-$def->properties['start_hour']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+$def->properties['start_hour_monday'] = new ezcPersistentObjectProperty();
+$def->properties['start_hour_monday']->columnName   = 'start_hour_monday';
+$def->properties['start_hour_monday']->propertyName = 'start_hour_monday';
+$def->properties['start_hour_monday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
 
-$def->properties['end_hour'] = new ezcPersistentObjectProperty();
-$def->properties['end_hour']->columnName   = 'end_hour';
-$def->properties['end_hour']->propertyName = 'end_hour';
-$def->properties['end_hour']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+$def->properties['start_hour_tuesday'] = new ezcPersistentObjectProperty();
+$def->properties['start_hour_tuesday']->columnName   = 'start_hour_tuesday';
+$def->properties['start_hour_tuesday']->propertyName = 'start_hour_tuesday';
+$def->properties['start_hour_tuesday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['start_hour_wednesday'] = new ezcPersistentObjectProperty();
+$def->properties['start_hour_wednesday']->columnName   = 'start_hour_wednesday';
+$def->properties['start_hour_wednesday']->propertyName = 'start_hour_wednesday';
+$def->properties['start_hour_wednesday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['start_hour_thursday'] = new ezcPersistentObjectProperty();
+$def->properties['start_hour_thursday']->columnName   = 'start_hour_thursday';
+$def->properties['start_hour_thursday']->propertyName = 'start_hour_thursday';
+$def->properties['start_hour_thursday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['start_hour_friday'] = new ezcPersistentObjectProperty();
+$def->properties['start_hour_friday']->columnName   = 'start_hour_friday';
+$def->properties['start_hour_friday']->propertyName = 'start_hour_friday';
+$def->properties['start_hour_friday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['start_hour_saturday'] = new ezcPersistentObjectProperty();
+$def->properties['start_hour_saturday']->columnName   = 'start_hour_saturday';
+$def->properties['start_hour_saturday']->propertyName = 'start_hour_saturday';
+$def->properties['start_hour_saturday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['start_hour_sunday'] = new ezcPersistentObjectProperty();
+$def->properties['start_hour_sunday']->columnName   = 'start_hour_sunday';
+$def->properties['start_hour_sunday']->propertyName = 'start_hour_sunday';
+$def->properties['start_hour_sunday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['end_hour_monday'] = new ezcPersistentObjectProperty();
+$def->properties['end_hour_monday']->columnName   = 'end_hour_monday';
+$def->properties['end_hour_monday']->propertyName = 'end_hour_monday';
+$def->properties['end_hour_monday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['end_hour_tuesday'] = new ezcPersistentObjectProperty();
+$def->properties['end_hour_tuesday']->columnName   = 'end_hour_tuesday';
+$def->properties['end_hour_tuesday']->propertyName = 'end_hour_tuesday';
+$def->properties['end_hour_tuesday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['end_hour_wednesday'] = new ezcPersistentObjectProperty();
+$def->properties['end_hour_wednesday']->columnName   = 'end_hour_wednesday';
+$def->properties['end_hour_wednesday']->propertyName = 'end_hour_wednesday';
+$def->properties['end_hour_wednesday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['end_hour_thursday'] = new ezcPersistentObjectProperty();
+$def->properties['end_hour_thursday']->columnName   = 'end_hour_thursday';
+$def->properties['end_hour_thursday']->propertyName = 'end_hour_thursday';
+$def->properties['end_hour_thursday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['end_hour_friday'] = new ezcPersistentObjectProperty();
+$def->properties['end_hour_friday']->columnName   = 'end_hour_friday';
+$def->properties['end_hour_friday']->propertyName = 'end_hour_friday';
+$def->properties['end_hour_friday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['end_hour_saturday'] = new ezcPersistentObjectProperty();
+$def->properties['end_hour_saturday']->columnName   = 'end_hour_saturday';
+$def->properties['end_hour_saturday']->propertyName = 'end_hour_saturday';
+$def->properties['end_hour_saturday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
+
+$def->properties['end_hour_sunday'] = new ezcPersistentObjectProperty();
+$def->properties['end_hour_sunday']->columnName   = 'end_hour_sunday';
+$def->properties['end_hour_sunday']->propertyName = 'end_hour_sunday';
+$def->properties['end_hour_sunday']->propertyType = ezcPersistentObjectProperty::PHP_TYPE_INT;
 
 $def->properties['inform_options'] = new ezcPersistentObjectProperty();
 $def->properties['inform_options']->columnName   = 'inform_options';

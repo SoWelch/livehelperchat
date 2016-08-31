@@ -22,8 +22,20 @@ class erLhcoreClassModelDepartament {
                'frd'    				=> $this->frd,
                'sad'    				=> $this->sad,
                'sud'    				=> $this->sud,
-               'start_hour'    			=> $this->start_hour,
-               'end_hour'    			=> $this->end_hour,
+               'start_hour_monday'          => $this->start_hour_monday,
+               'start_hour_tuesday'         => $this->start_hour_tuesday,
+               'start_hour_wednesday'       => $this->start_hour_wednesday,
+               'start_hour_thursday'        => $this->start_hour_thursday,
+               'start_hour_friday'          => $this->start_hour_friday,
+               'start_hour_saturday'        => $this->start_hour_saturday,
+               'start_hour_sunday'          => $this->start_hour_sunday,
+               'end_hour_monday'         => $this->end_hour_monday,
+               'end_hour_tuesday'         => $this->end_hour_tuesday,
+               'end_hour_wednesday'       => $this->end_hour_wednesday,
+               'end_hour_thursday'        => $this->end_hour_thursday,
+               'end_hour_friday'          => $this->end_hour_friday,
+               'end_hour_saturday'        => $this->end_hour_saturday,
+               'end_hour_sunday'          => $this->end_hour_sunday,
                'inform_options'    		=> $this->inform_options,
                'inform_delay'    		=> $this->inform_delay,
                'inform_close'    		=> $this->inform_close,
@@ -116,21 +128,99 @@ class erLhcoreClassModelDepartament {
 	   			return $this->department_transfer;
 	   		break;
 
-	   		case 'start_hour_front':
-	   				return floor($this->start_hour/100);
-	   			break;
+        case 'start_hour_front_monday':
+            return floor($this->start_hour_monday/100);
+          break;
+        
+        case 'start_hour_front_tuesday':
+            return floor($this->start_hour_tuesday/100);
+          break;
 
-	   		case 'start_minutes_front':
-	   				return $this->start_hour - ($this->start_hour_front * 100);
-	   			break;
+        case 'start_hour_front_wednesday':
+            return floor($this->start_hour_wednesday/100);
+          break;
 
-	   		case 'end_hour_front':
-	   				return floor($this->end_hour/100);
-	   			break;
+        case 'start_hour_front_thursday':
+            return floor($this->start_hour_thursday/100);
+          break;
 
-	   		case 'end_minutes_front':
-	   				return $this->end_hour - ($this->end_hour_front * 100);
-	   			break;
+        case 'start_hour_front_friday':
+            return floor($this->start_hour_friday/100);
+          break;
+
+        case 'start_hour_front_saturday':
+            return floor($this->start_hour_saturday/100);
+          break;
+
+        case 'start_hour_front_sunday':
+            return floor($this->start_hour_sunday/100);
+          break;
+
+        case 'start_minutes_front_monday':
+            return $this->start_hour_monday - ($this->start_hour_front_monday * 100);
+          break;
+        case 'start_minutes_front_tuesday':
+            return $this->start_hour_tuesday - ($this->start_hour_front_tuesday * 100);
+          break;
+        case 'start_minutes_front_wednesday':
+            return $this->start_hour_wednesday - ($this->start_hour_front_wednesday * 100);
+          break;
+        case 'start_minutes_front_thursday':
+            return $this->start_hour_thursday - ($this->start_hour_front_thursday * 100);
+          break;
+        case 'start_minutes_front_friday':
+            return $this->start_hour_friday - ($this->start_hour_front_friday * 100);
+          break;
+        case 'start_minutes_front_saturday':
+            return $this->start_hour_saturday - ($this->start_hour_front_saturday * 100);
+          break;
+        case 'start_minutes_front_sunday':
+            return $this->start_hour_sunday - ($this->start_hour_front_sunday * 100);
+          break;
+
+        case 'end_hour_front_monday':
+            return floor($this->end_hour_monday/100);
+          break;
+        case 'end_hour_front_tuesday':
+            return floor($this->end_hour_tuesday/100);
+          break;
+        case 'end_hour_front_wednesday':
+            return floor($this->end_hour_wednesday/100);
+          break;
+        case 'end_hour_front_thursday':
+            return floor($this->end_hour_thursday/100);
+          break;
+        case 'end_hour_front_friday':
+            return floor($this->end_hour_friday/100);
+          break;
+        case 'end_hour_front_saturday':
+            return floor($this->end_hour_saturday/100);
+          break;
+        case 'end_hour_front_sunday':
+            return floor($this->end_hour_sunday/100);
+          break;
+
+        case 'end_minutes_front_monday':
+            return $this->end_hour_monday - ($this->end_hour_front_monday * 100);
+          break;
+        case 'end_minutes_front_tuesday':
+            return $this->end_hour_tuesday - ($this->end_hour_front_tuesday * 100);
+          break;
+        case 'end_minutes_front_wednesday':
+            return $this->end_hour_wednesday - ($this->end_hour_front_wednesday * 100);
+          break;
+        case 'end_minutes_front_thursday':
+            return $this->end_hour_thursday - ($this->end_hour_front_thursday * 100);
+          break;
+        case 'end_minutes_front_friday':
+            return $this->end_hour_friday - ($this->end_hour_front_friday * 100);
+          break;
+        case 'end_minutes_front_saturday':
+            return $this->end_hour_saturday - ($this->end_hour_front_saturday * 100);
+          break;
+        case 'end_minutes_front_sunday':
+            return $this->end_hour_sunday - ($this->end_hour_front_sunday * 100);
+          break;
 	   		
 	   		default:
 	   			;
@@ -243,8 +333,20 @@ class erLhcoreClassModelDepartament {
     public $sad = 0;
     public $sud = 0;
     public $inform_delay = 0;
-    public $start_hour = 0;
-    public $end_hour = 0;
+    public $start_hour_monday = 0;
+    public $start_hour_tuesday = 0;
+    public $start_hour_wednesday = 0;
+    public $start_hour_thursday = 0;
+    public $start_hour_friday = 0;
+    public $start_hour_saturday = 0;
+    public $start_hour_sunday = 0;
+    public $end_hour_monday = 0;
+    public $end_hour_tuesday = 0;
+    public $end_hour_wednesday = 0;
+    public $end_hour_thursday = 0;
+    public $end_hour_friday = 0;
+    public $end_hour_saturday = 0;
+    public $end_hour_sunday = 0;
     public $inform_options = '';    
     public $inform_close = 0;    
     public $online_hours_active = 0;

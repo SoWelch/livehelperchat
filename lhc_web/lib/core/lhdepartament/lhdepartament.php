@@ -121,19 +121,91 @@ class erLhcoreClassDepartament{
 	   			'MaxWaitTimeoutSeconds' => new ezcInputFormDefinitionElement(
 	   					ezcInputFormDefinitionElement::OPTIONAL, 'int'
 	   			),
-	   			'StartHour' => new ezcInputFormDefinitionElement(
+	   			'StartHourMonday' => new ezcInputFormDefinitionElement(
 	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
 	   			),
-	   			'StartHourMinit' => new ezcInputFormDefinitionElement(
+	   			'StartHourTuesday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'StartHourWednesday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'StartHourThursday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'StartHourFriday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'StartHourSaturday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'StartHourSunday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'StartHourMinitMonday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'StartHourMinitTuesday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'StartHourMinitWednesday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'StartHourMinitThursday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'StartHourMinitFriday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'StartHourMinitSaturday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'StartHourMinitSunday' => new ezcInputFormDefinitionElement(
 	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
 	   			),
 	   			'inform_unread_delay' => new ezcInputFormDefinitionElement(
 	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 5)
 	   			),
-	   			'EndHour' => new ezcInputFormDefinitionElement(
+	   			'EndHourMonday' => new ezcInputFormDefinitionElement(
 	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
 	   			),
-	   			'EndHourMinit' => new ezcInputFormDefinitionElement(
+	   			'EndHourTuesday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'EndHourWednesday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'EndHourThursday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'EndHourFriday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'EndHourSaturday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'EndHourSunday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 24)
+	   			),
+	   			'EndHourMinitMonday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'EndHourMinitTuesday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'EndHourMinitWednesday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'EndHourMinitThursday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'EndHourMinitFriday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'EndHourMinitSaturday' => new ezcInputFormDefinitionElement(
+	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
+	   			),
+	   			'EndHourMinitSunday' => new ezcInputFormDefinitionElement(
 	   					ezcInputFormDefinitionElement::OPTIONAL, 'int',array('min_range' => 0, 'mx_range' => 60)
 	   			),
 	   			'inform_delay' => new ezcInputFormDefinitionElement(
@@ -349,33 +421,46 @@ class erLhcoreClassDepartament{
 	   		$department->inform_options = serialize(array());
 	   	}
 
-	   	
-	   	if ( $form->hasValidData( 'StartHour' ) ) {
-	   		$startHour = $form->StartHour;
-	   	} else {
-	   		$startHour = 0;
+	   	$days = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
+
+	   	for ($i = 0; $i < count($days); $i++) {
+	   		$day = $days[$i];
+
+	   		$startH = 'StartHour' . $day;
+	   		$startM = 'StartHourMinit' . $day;
+	   		$endH = 'EndHour' . $day;
+	   		$endM = 'EndHourMinit' . $day;
+
+	   		if ( $form->hasValidData( $startH ) ) {
+		   		$startHour = $form->$startH ;
+		   	} else {
+		   		$startHour = 0;
+		   	}
+
+		   	if ( $form->hasValidData( $endH ) ) {
+		   		$endHour = $form->$endH;
+		   	} else {
+		   		$endHour = 0;
+		   	}
+
+		   	if ( $form->hasValidData( $startM ) ) {
+		   		$StartHourMinit =  str_pad($form->$startM, 2, '0', STR_PAD_LEFT);
+		   	} else {
+		   		$StartHourMinit = '00';
+		   	}
+		   	
+		   	if ( $form->hasValidData( $endM ) ) {
+		   		$endHourMinit = str_pad($form->$endM, 2, '0', STR_PAD_LEFT);
+		   	} else {
+		   		$endHourMinit = '00';
+		   	}
+
+		   	$start = 'start_hour_'.strtolower($day); 
+		   	$end = 'end_hour_'.strtolower($day);
+
+		   	$department->$start = $startHour.$StartHourMinit;
+	   		$department->$end = $endHour.$endHourMinit;
 	   	}
-	   	
-	   	if ( $form->hasValidData( 'EndHour' ) ) {
-	   		$endHour = $form->EndHour;
-	   	} else {
-	   		$endHour = 0;
-	   	}
-	   	
-	   	if ( $form->hasValidData( 'StartHourMinit' ) ) {
-	   		$StartHourMinit =  str_pad($form->StartHourMinit, 2, '0', STR_PAD_LEFT);
-	   	} else {
-	   		$StartHourMinit = '00';
-	   	}
-	   	
-	   	if ( $form->hasValidData( 'EndHourMinit' ) ) {
-	   		$endHourMinit = str_pad($form->EndHourMinit, 2, '0', STR_PAD_LEFT);
-	   	} else {
-	   		$endHourMinit = '00';
-	   	}
-	   	
-	   	$department->start_hour = $startHour.$StartHourMinit;
-	   	$department->end_hour = $endHour.$endHourMinit;
 	   	
 	   	if ( $form->hasValidData( 'inform_delay' )  ) {
 	   		$department->inform_delay = $form->inform_delay;

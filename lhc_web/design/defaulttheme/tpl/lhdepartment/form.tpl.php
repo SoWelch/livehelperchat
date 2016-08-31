@@ -59,30 +59,60 @@
 		    	<div ng-show="OnlineHoursActive">
 					<h4><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Workdays/work hours, during these days/hours chat will be active automatically');?></h4>
 					
-					<label><input type="checkbox" name="mod" value="1" <?php if ($departament->mod == 1) : ?>checked="checked"<?php endif;?> /> <?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Monday');?></label>
-					<label><input type="checkbox" name="tud" value="1" <?php if ($departament->tud == 1) : ?>checked="checked"<?php endif;?> /> <?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Tuesday');?></label>
-					<label><input type="checkbox" name="wed" value="1" <?php if ($departament->wed == 1) : ?>checked="checked"<?php endif;?> /> <?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Wednesday');?></label>
-					<label><input type="checkbox" name="thd" value="1" <?php if ($departament->thd == 1) : ?>checked="checked"<?php endif;?> /> <?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Thursday');?></label>
-					<label><input type="checkbox" name="frd" value="1" <?php if ($departament->frd == 1) : ?>checked="checked"<?php endif;?> /> <?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Friday');?></label>
-					<label><input type="checkbox" name="sad" value="1" <?php if ($departament->sad == 1) : ?>checked="checked"<?php endif;?> /> <?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Saturday');?></label>
-					<label><input type="checkbox" name="sud" value="1" <?php if ($departament->sud == 1) : ?>checked="checked"<?php endif;?> /> <?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Sunday');?></label>
-					
 					<h4><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Work hours, 24 hours format, 1 - 24, minutes format 0 - 60');?></h4>
 					
 					<div class="form-inline">
-					   <div class="form-group">
-					       <label><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Hours from');?></label>
-					       <input type="text" class="form-control" name="StartHour" title="<?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Hours from, E.g. 8');?>" value="<?php echo htmlspecialchars($departament->start_hour_front);?>" />
-					       
-					       <label><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Minutes from');?></label>
-					       <input type="text" class="form-control" name="StartHourMinit" title="<?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Minutes from, E.g. 30');?>" value="<?php echo htmlspecialchars($departament->start_minutes_front);?>" />
-					       
-					       <label><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Hours to');?></label>
-					       <input type="text" class="form-control" name="EndHour" title="<?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Hours to, E.g. 17');?>" value="<?php echo htmlspecialchars($departament->end_hour_front);?>" />
-					       
-					       <label><?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Minutes to');?></label>
-					       <input type="text" class="form-control" name="EndHourMinit" title="<?php echo erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Minutes to, E.g. 30');?>" value="<?php echo htmlspecialchars($departament->end_minutes_front);?>" />
-					   </div>
+				   		<table style="width:100%" class="form-group">
+				   			<tr class="border-grey">
+				   				<th></th>
+				   				<th>From</th>
+				   				<th>To</th>
+				   			</tr>
+
+						   	<?php
+						   		$days = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
+						   		$abbr = array("mod", "tud", "wed", "thd", "frd", "sad", "sud");
+
+						   		for ($i = 0; $i < count($days); $i++) {
+
+						   			$day = $days[$i];
+
+						   			if ($departament->$abbr[$i] == 1) {
+						   				$checkbox = '<input type="checkbox" name="' . $abbr[$i] . '" value="1" checked="checked"/>';
+						   			} else {
+						   				$checkbox = '<input type="checkbox" name="' . $abbr[$i] . '" value="1"/>';
+						   			}
+
+						   			$start_hour = 'start_hour_front_' . strtolower($day);
+						   			$start_minute = 'start_minutes_front_' . strtolower($day);
+						   			$end_hour = 'end_hour_front_' . strtolower($day);
+						   			$end_minute = 'end_minutes_front_' . strtolower($day);
+
+						   			echo '
+							   			<tr class="border-grey">
+							   				<td class="pr10">
+							   					' . $checkbox . '
+							   					<label>' . erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit',$day) . '</label>
+							   				</td>
+							   				<td class="pr10">
+							   					<label>' . erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Hour') . '</label>
+							       				<input type="text" class="form-control m10" name="StartHour' . $day . '" title="' . erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Hours from, E.g. 8') . '" value="' . htmlspecialchars($departament->$start_hour) . '" />
+
+							       				<label>' . erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Minute') . '</label>
+							       				<input type="text" class="form-control m10" name="StartHourMinit' . $day . '" title="' . erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Minutes from, E.g. 30') . '" value="' . htmlspecialchars($departament->$start_minute) . '" />
+							   				</td>
+							   				<td class="pr10">
+							   					<label>' . erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Hour') . '</label>
+							       				<input type="text" class="form-control m10" name="EndHour' . $day . '" title="' . erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Hours to, E.g. 17') . '" value="' . htmlspecialchars($departament->$end_hour) . '" />
+
+							       				<label>' . erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Minute') . '</label>
+							       				<input type="text" class="form-control m10" name="EndHourMinit' . $day . '" title="' . erTranslationClassLhTranslation::getInstance()->getTranslation('department/edit','Minutes from, E.g. 30') . '" value="' . htmlspecialchars($departament->$end_minute) . '" />
+							   				</td>
+							   			</tr>
+						   			';
+						   		} 
+						   	?>
+				   		</table>
 					</div>
 				</div>
 			</div>
